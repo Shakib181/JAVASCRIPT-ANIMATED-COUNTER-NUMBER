@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT ANIMATED COUNTER NUMBER</title>
+
+    <style>
+        .div1{
+            background-color: rebeccapurple;
+            width: 30%;
+            height: 250px;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 35px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h2>Total Project</h2>
+        <h3 id="num1"></h3>
+    </div>
+
+
+
+    <div class="div1">
+        <h2>Total Client</h2>
+        <h3 id="num2"></h3>
+    </div>
+
+
+
+    <div class="div1">
+        <h2>Total Achive</h2>
+        <h3 id="num3"></h3>
+    </div>
+
+
+    <script>
+        var count = 0;
+        var project = setInterval(projectFun, 25)
+
+        function projectFun(){
+            count++;
+            var num1 = document.getElementById("num1").innerHTML = count;
+            if(count == 200){
+                clearInterval(project);
+            }
+
+        }
+
+
+        var count1 = 0;
+        var client = setInterval(clientFun, 18)
+
+        function clientFun(){
+            count1++;
+            var num2 = document.getElementById("num2").innerHTML = count1;
+            if(count1 == 300){
+                clearInterval(client);
+            }
+
+        }
+
+
+
+        var count2 = 0;
+        var achive = setInterval(achiveFun, 10)
+
+        function achiveFun(){
+            count2++;
+            var num3 = document.getElementById("num3").innerHTML = count2;
+            if(count2 == 500){
+                clearInterval(achive);
+            }
+
+        }
+    </script>
+</body>
+</html>
